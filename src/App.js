@@ -18,8 +18,8 @@ function App() {
           sunset="20:45"
           celsious={28}
         />
-        <Path />
       </div>
+      <Path />
     </div>
   );
 }
