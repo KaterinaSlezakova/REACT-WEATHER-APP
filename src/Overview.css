@@ -3,7 +3,7 @@ h1 {
   font-size: 40px;
   line-height: 40px;
   display: inline;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-right: 10px;
 }
 h2 {
@@ -11,7 +11,7 @@ h2 {
   line-height: 40px;
   display: inline;
   color: #202124;
-  font-family: 'Poppins', sans-seri;
+  font-family: "Poppins", sans-seri;
 }
 
 .Overview {
