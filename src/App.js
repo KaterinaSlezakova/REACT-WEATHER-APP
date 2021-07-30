@@ -1,6 +1,7 @@
 import Overview from "./Overview";
 import Form from "./Form";
 import Temperature from "./Temperature";
+import Path from "./Path";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
           sunset="20:45"
           celsious={28}
         />
+        <Path />
       </div>
     </div>
   );
