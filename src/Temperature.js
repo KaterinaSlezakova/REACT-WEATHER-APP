@@ -9,7 +9,7 @@ export default function Temperature(props) {
           <ReactAnimatedWeather
             icon="CLEAR_DAY"
             color="#202124"
-            size= {70}
+            size={70}
             animate={true}
           />
           <span>
