@@ -10,9 +10,9 @@ export default function Overview() {
       <ul>
         <li>
           Last updated at Sunday
-          <span id="date"> 12:24</span>
+          <span> 12:24</span>
         </li>
-        <li id="description">clear sky</li>
+        <li>clear sky</li>
       </ul>
     </div>
   );

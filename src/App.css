@@ -7,7 +7,7 @@ body {
  .weather-app {
    padding: 20px;
    border-radius: 10px;
-   background: rgba(252, 254, 255, 0.6);
+   background: rgb(117, 206, 250, 0.3);
  }
  .weather-app-wrapper {
    max-width: 600px;
