@@ -5,7 +5,7 @@ import Path from "./Path";
 
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="weather-app-wrapper">
       <div className="weather-app shadow-lg">
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+
