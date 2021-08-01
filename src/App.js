@@ -12,11 +12,6 @@ export default function App() {
         <Form />
         <Overview />
         <Temperature
-          humidity={40}
-          wind={5}
-          sunrise="5:45"
-          sunset="20:45"
-          celsious={28}
         />
         <Path />
       </div>
