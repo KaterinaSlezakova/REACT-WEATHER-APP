@@ -2,7 +2,6 @@ import Overview from "./Overview";
 import Form from "./Form";
 import Temperature from "./Temperature";
 import Path from "./Path";
-
 import "./App.css";
 
 export default function App() {

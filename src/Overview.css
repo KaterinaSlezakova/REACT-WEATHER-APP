@@ -5,6 +5,7 @@ h1 {
   display: inline;
   font-family: "Poppins", sans-serif;
   margin-right: 10px;
+  font-weight: 600;
 }
 h2 {
   font-size: 25px;
@@ -12,4 +13,5 @@ h2 {
   display: inline;
   color: #202124;
   font-family: "Poppins", sans-seri;
+  font-weight: 600;
 }
