@@ -1,11 +1,9 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-
-
 export default function Temperature(props) {
   return (
-    <div className="row mt-3">
+    <div className="row mt-3 mb-3">
       <div className="col-5 ms-3">
         <div className="weather-temperature">
           <ReactAnimatedWeather
