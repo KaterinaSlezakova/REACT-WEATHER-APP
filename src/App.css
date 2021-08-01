@@ -1,8 +1,8 @@
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background: url(images/santorini.jpg);
-    background-size: cover;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(images/santorini.jpg);
+  background-size: cover;
+}
 
 li {
   color: #202124;
@@ -19,15 +19,15 @@ ul {
   margin: 0;
   padding: 0;
 }
- .weather-app {
-   padding: 20px;
-   border-radius: 10px;
-   background: rgb(255, 255, 255,0.7);
- }
- .weather-app-wrapper {
-   max-width: 600px;
-   margin: 30px auto;
- }
+.weather-app {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255, 0.7);
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
 
 .weather-temperature .units {
   position: relative;
@@ -35,7 +35,6 @@ ul {
   top: -30px;
   line-height: 1;
   margin-left: 5px;
-  
 }
 .weather-temperature .active {
   color: #202124;
@@ -46,13 +45,8 @@ ul {
   text-decoration: none;
 }
 .weather-temperature strong {
-  color:#202124;
+  color: #202124;
   line-height: 64px;
   font-size: 50px;
   font-weight: 400;
-  
 }
-
-
-
-
