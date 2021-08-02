@@ -1,8 +1,8 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
-import Form from "./Form";
 
-export default function Temperature() {
+
+export default function Temperature(props) {
   return (
     <div className="row mt-3 mb-3">
       <div className="col-5 ms-3">
@@ -14,7 +14,7 @@ export default function Temperature() {
             animate={true}
           />
           <span>
-            <strong className="temperature ms-3">{celsious}</strong>
+            <strong className="temperature ms-3">{props.temperature}</strong>
             <span className="units">°C | °F</span>
           </span>
         </div>
@@ -23,11 +23,11 @@ export default function Temperature() {
         <ul>
           <li>
             Humidity:
-            <span className="humidity">40</span>%
+            <span className="humidity"> 40 </span>%
           </li>
           <li>
             Wind:
-            <span className="wind"> 5</span>
+            <span className="wind"> 5 </span>
             km/h
           </li>
         </ul>

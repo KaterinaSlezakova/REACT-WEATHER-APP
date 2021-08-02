@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
+
+
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Form() {
   const [ready, setReady] = useState(false);
-  const [celsious, setCelsious] = useState(null);
+  const [temperature, setTemperature] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
-    setCelsious(response.data.main.temp);
+    console.log(response.data.main.temp);
+    setTemperature(response.data.main.temp);
     setReady(true);
   }
 
-  if (ready) {
+  if (ready === true) {
     return (
       <form className="mb-4">
         <div className="row">
@@ -39,9 +43,11 @@ export default function Form() {
   } else {
     const apiKey = "476ec4516bf60be6018bdca6a47318a0";
     let city = "Santorini";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading..";
+
+    return (
+    <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+    );
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Overview.css";
 
-export default function Overview() {
+export default function Overview(props) {
   return (
     <div className="Overview">
       <h1 id="city">Santorini</h1>
