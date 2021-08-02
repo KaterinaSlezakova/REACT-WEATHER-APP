@@ -15,7 +15,7 @@ export default function Form() {
     setReady(true);
   }
 
-  if (ready === true) {
+  if (ready===true){
     return (
       <form className="mb-4">
         <div className="row">
@@ -45,9 +45,6 @@ export default function Form() {
     let city = "Santorini";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-
-    return (
-    <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
-    );
+    return <Loader type="ThreeDots" color="#0B5ED7" height={80} width={80} />;
   }
 }
