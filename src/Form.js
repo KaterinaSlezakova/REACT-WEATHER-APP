@@ -49,7 +49,7 @@ export default function Form(props) {
           </div>
         </form>
         <Overview
-          city={weatherData.city}
+          city="Berlin"
           country={weatherData.country}
           description={weatherData.description}
           date={weatherData.date}
@@ -62,10 +62,10 @@ export default function Form(props) {
       </div>
     );
   } else {
-    const apiKey = "476ec4516bf60be6018bdca6a47318a0";
-    let city = "Santorini";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey ="1da419927439ad536d3c0a898ca6bd6f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
 
     return <Loader type="ThreeDots" color="#0B5ED7" height={80} width={80} />;
   }
