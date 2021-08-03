@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-
+import Overview from "./Overview";
+import Temperature from "./Temperature";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -17,6 +18,7 @@ export default function Form() {
 
   if (ready===true){
     return (
+      <div>
       <form className="mb-4">
         <div className="row">
           <div className="col-8">
@@ -39,7 +41,11 @@ export default function Form() {
           </div>
         </div>
       </form>
+      <Overview />
+      <Temperature temperature={Math.round(temperature)} />
+      </div>
     );
+
   } else {
     const apiKey = "476ec4516bf60be6018bdca6a47318a0";
     let city = "Santorini";
