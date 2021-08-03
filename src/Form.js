@@ -8,7 +8,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(defaultCity);
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -22,11 +22,25 @@ export default function Form(props) {
       date: "Sunday 15:00",
     });
   }
+  function search() {
+    const apiKey = "e23112c75ac1ee62d79ac9963082cc55";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
 
   if (weatherData.ready) {
     return (
       <div>
-        <form className="mb-4">
+        <form className="mb-4" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-8">
               <input
@@ -34,6 +48,7 @@ export default function Form(props) {
                 placeholder="Type a city.."
                 className="form-control"
                 autoComplete="off"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-1">
@@ -49,7 +64,7 @@ export default function Form(props) {
           </div>
         </form>
         <Overview
-          city= {weatherData.city}
+          defaultCity="Santorini"
           country={weatherData.country}
           description={weatherData.description}
           date={weatherData.date}
@@ -62,12 +77,7 @@ export default function Form(props) {
       </div>
     );
   } else {
-    const apiKey ="1da419927439ad536d3c0a898ca6bd6f";
-    let city= "Santorini"
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-    console.log(apiUrl);
-
+    search();
     return <Loader type="ThreeDots" color="#0B5ED7" height={80} width={80} />;
   }
 }
