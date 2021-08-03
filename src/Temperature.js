@@ -23,11 +23,12 @@ export default function Temperature(props) {
         <ul>
           <li>
             Humidity:
-            <span className="humidity"> 40 </span>%
+            <span className="humidity"> {props.humidity}</span>
+            %
           </li>
           <li>
             Wind:
-            <span className="wind"> 5 </span>
+            <span className="wind"> {props.wind}</span>
             km/h
           </li>
         </ul>

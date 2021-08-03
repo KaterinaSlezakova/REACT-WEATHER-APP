@@ -5,14 +5,14 @@ import "./Overview.css";
 export default function Overview(props) {
   return (
     <div className="Overview">
-      <h1 id="city">Santorini</h1>
-      <h2 id="country">GR</h2>
+      <h1 id="city">{props.city},</h1>
+      <h2 id="country">{props.country}</h2>
       <ul>
         <li>
-          Last updated at Sunday
-          <span> 12:24</span>
+          Last updated at
+          <span> {props.date}</span>
         </li>
-        <li>clear sky</li>
+        <li>{props.description}</li>
       </ul>
     </div>
   );

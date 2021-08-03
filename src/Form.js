@@ -6,51 +6,62 @@ import Temperature from "./Temperature";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-export default function Form() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+export default function Form(props) {
+  const [weatherData, setWeatherData] = useState ({ready: false});
+
 
   function handleResponse(response) {
-    console.log(response.data.main.temp);
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setWeatherData({
+      ready:true,
+      city:response.data.name,
+      temperature: response.data.main.temp,
+      country: response.data.sys.country,
+      humidity:response.data.main.humidity,
+      wind: response.data.wind.speed,
+      description:response.data.weather[0].description,
+      iconUrl:response.data.weather[0].icon,
+      date:"Sunday 15:00"
+    })
+  
+    
   }
 
-  if (ready===true){
+  if (weatherData.ready) {
     return (
       <div>
-      <form className="mb-4">
-        <div className="row">
-          <div className="col-8">
-            <input
-              type="search"
-              placeholder="Type a city.."
-              className="form-control"
-              autoComplete="off"
-            />
+        <form className="mb-4">
+          <div className="row">
+            <div className="col-8">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                className="form-control"
+                autoComplete="off"
+                
+              />
+            </div>
+            <div className="col-1">
+              <button type="submit" className="btn btn-primary">
+                <i className="fas fa-search"></i>
+              </button>
+            </div>
+            <div className="col-1">
+              <button type="button" className="btn btn-warning">
+                <i className="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
           </div>
-          <div className="col-1">
-            <button type="submit" className="btn btn-primary">
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
-          <div className="col-1">
-            <button type="button" className="btn btn-warning">
-              <i className="fas fa-map-marker-alt"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-      <Overview />
-      <Temperature temperature={Math.round(temperature)} />
+        </form>
+        <Overview city={weatherData.city} country={weatherData.country} description={weatherData.description} date={weatherData.date} />
+        <Temperature temperature={Math.round(weatherData.temperature)} humidity={weatherData.humidity} wind={Math.round(weatherData.wind)}/>
       </div>
     );
-
   } else {
     const apiKey = "476ec4516bf60be6018bdca6a47318a0";
     let city = "Santorini";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+    
     return <Loader type="ThreeDots" color="#0B5ED7" height={80} width={80} />;
   }
 }
