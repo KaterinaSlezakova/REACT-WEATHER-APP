@@ -12,6 +12,8 @@ export default function Form(props) {
   const [city, setCity] = useState("Santorini");
   
   function handleResponse(response) {
+    let sunrise = new Date(response.data.sys.sunrise * 1000);
+    console.log(sunrise);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -22,6 +24,9 @@ export default function Form(props) {
       description: response.data.weather[0].description,
       iconUrl: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000)
+      
     });
   }
   function search() {
@@ -74,6 +79,8 @@ export default function Form(props) {
           temperature={Math.round(weatherData.temperature)}
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
+          sunrise={weatherData.sunrise.getDate()}
+          sunset={weatherData.sunset.getDate()}
         />
       </div>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-
 export default function Temperature(props) {
   return (
     <div className="row mt-3 mb-3">
@@ -23,8 +22,7 @@ export default function Temperature(props) {
         <ul>
           <li>
             Humidity:
-            <span className="humidity"> {props.humidity}</span>
-            %
+            <span className="humidity"> {props.humidity}</span>%
           </li>
           <li>
             Wind:
@@ -37,11 +35,11 @@ export default function Temperature(props) {
         <ul>
           <li>
             Sunrise:
-            <span className="sunrise"> 5:45</span>
+            <span className="sunrise">{props.sunrise}</span>
           </li>
           <li>
             Sunset:
-            <span className="sunset"> 20:45</span>
+            <span className="sunset">{props.sunset}</span>
           </li>
         </ul>
       </div>
