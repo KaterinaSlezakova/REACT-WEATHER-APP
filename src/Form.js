@@ -3,12 +3,14 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import Overview from "./Overview";
 import Temperature from "./Temperature";
+import FormattedDate from "./FormattedDate";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Santorini");
+  
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -19,14 +21,13 @@ export default function Form(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       iconUrl: response.data.weather[0].icon,
-      date: "Sunday 15:00",
+      date: new Date(response.data.dt * 1000),
     });
   }
   function search() {
     const apiKey = "e23112c75ac1ee62d79ac9963082cc55";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    console.log(apiUrl);
   }
 
   function handleSubmit(event) {
@@ -67,9 +68,9 @@ export default function Form(props) {
           cityName={weatherData.city}
           country={weatherData.country}
           description={weatherData.description}
-          date={weatherData.date}
-        />
-        <Temperature
+          />
+          <FormattedDate day={weatherData.date.getDay()} hours={weatherData.date.getHours()} minutes={weatherData.date.getMinutes()} />
+          <Temperature
           temperature={Math.round(weatherData.temperature)}
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
