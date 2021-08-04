@@ -8,7 +8,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(defaultCity);
+  const [city, setCity] = useState("Santorini");
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -64,7 +64,7 @@ export default function Form(props) {
           </div>
         </form>
         <Overview
-          defaultCity="Santorini"
+          cityName={weatherData.city}
           country={weatherData.country}
           description={weatherData.description}
           date={weatherData.date}

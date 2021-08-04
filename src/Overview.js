@@ -5,7 +5,7 @@ import "./Overview.css";
 export default function Overview(props) {
   return (
     <div className="Overview">
-      <h1 id="city">{props.defaultCity},</h1>
+      <h1 id="city">{props.cityName},</h1>
       <h2 id="country">{props.country}</h2>
       <ul>
         <li>
