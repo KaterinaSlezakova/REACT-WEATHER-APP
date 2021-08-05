@@ -34,12 +34,12 @@ export default function Temperature(props) {
       <div className="col-3">
         <ul>
           <li>
-            Sunrise:
-            <span className="sunrise">{props.sunrise}</span>
+            <i>Sunrise:</i>
+            <span className="sunrise"> {props.sunriseHour}:{props.sunriseMin}</span>
           </li>
           <li>
-            Sunset:
-            <span className="sunset">{props.sunset}</span>
+            <i>Sunset:</i>
+            <span className="sunset"> {props.sunsetHour}:{props.sunsetMin}</span>
           </li>
         </ul>
       </div>

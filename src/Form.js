@@ -82,8 +82,10 @@ export default function Form(props) {
           temperature={Math.round(weatherData.temperature)}
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
-          sunrise={weatherData.sunrise.getDate()}
-          sunset={weatherData.sunset.getDate()}
+          sunriseHour={weatherData.sunrise.getHours()}
+          sunriseMin={weatherData.sunrise.getMinutes()}
+          sunsetHour={weatherData.sunset.getHours()}
+          sunsetMin={weatherData.sunset.getMinutes()}
         />
       </div>
     );

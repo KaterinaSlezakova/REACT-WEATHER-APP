@@ -7,9 +7,7 @@ export default function Overview(props) {
     <div className="Overview">
       <h1 id="city">{props.cityName},</h1>
       <h2 id="country">{props.country}</h2>
-      <ul>
-        <li>{props.description}</li>
-      </ul>
+      <div class="text-capitalize">{props.description}</div>
     </div>
   );
 }
