@@ -10,7 +10,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Santorini");
-  
+
   function handleResponse(response) {
     let sunrise = new Date(response.data.sys.sunrise * 1000);
     console.log(sunrise);
@@ -25,8 +25,7 @@ export default function Form(props) {
       iconUrl: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
       sunrise: new Date(response.data.sys.sunrise * 1000),
-      sunset: new Date(response.data.sys.sunset * 1000)
-      
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
   function search() {
@@ -73,9 +72,13 @@ export default function Form(props) {
           cityName={weatherData.city}
           country={weatherData.country}
           description={weatherData.description}
-          />
-          <FormattedDate day={weatherData.date.getDay()} hours={weatherData.date.getHours()} minutes={weatherData.date.getMinutes()} />
-          <Temperature
+        />
+        <FormattedDate
+          day={weatherData.date.getDay()}
+          hours={weatherData.date.getHours()}
+          minutes={weatherData.date.getMinutes()}
+        />
+        <Temperature
           temperature={Math.round(weatherData.temperature)}
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
