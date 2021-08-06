@@ -12,8 +12,6 @@ export default function Form(props) {
   const [city, setCity] = useState("Santorini");
 
   function handleResponse(response) {
-    let sunrise = new Date(response.data.sys.sunrise * 1000);
-    console.log(sunrise);
     setWeatherData({
       ready: true,
       city: response.data.name,
