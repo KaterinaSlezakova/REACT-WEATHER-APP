@@ -4,14 +4,15 @@ import WeatherIcon from "./WeatherIcon";
 export default function Temperature(props) {
   return (
     <div className="row mt-3 mb-3">
-      <div className="col-5 ms-3">
-        <div className="weather-temperature">
-          <WeatherIcon code={props.icon}
-          />
-          <span>
-            <strong className="temperature ms-3">{props.temperature}</strong>
+      <div className="col-5 ">
+        <div className="weather-temperature clearfix">
+          <div className="float-start">
+            <WeatherIcon code={props.icon} />
+          </div>
+          <div className="float-none">
+            <span className="temperature me-3 ">{props.temperature}</span>
             <span className="units">°C | °F</span>
-          </span>
+          </div>
         </div>
       </div>
       <div className="col-3">
@@ -31,11 +32,17 @@ export default function Temperature(props) {
         <ul>
           <li>
             <i>Sunrise:</i>
-            <span className="sunrise"> {props.sunriseHour}:{props.sunriseMin}</span>
+            <span className="sunrise">
+              {" "}
+              {props.sunriseHour}:{props.sunriseMin}
+            </span>
           </li>
           <li>
             <i>Sunset:</i>
-            <span className="sunset"> {props.sunsetHour}:{props.sunsetMin}</span>
+            <span className="sunset">
+              {" "}
+              {props.sunsetHour}:{props.sunsetMin}
+            </span>
           </li>
         </ul>
       </div>

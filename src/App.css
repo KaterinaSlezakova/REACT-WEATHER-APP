@@ -36,7 +36,7 @@ ul {
   font-size: 17px;
   top: -30px;
   line-height: 1;
-  margin-left: 5px;
+  margin-left: -10px;
 }
 .weather-temperature .active {
   color: #202124;
@@ -46,8 +46,8 @@ ul {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-.weather-temperature strong {
-  color: #202124;
+.weather-temperature span {
+  color:#202124;
   line-height: 64px;
   font-size: 50px;
   font-weight: 400;
