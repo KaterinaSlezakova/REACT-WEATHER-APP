@@ -1,21 +1,10 @@
 import React from "react";
-import WeatherIcon from "./WeatherIcon";
+
 
 export default function Temperature(props) {
   return (
-    <div className="row mt-3 mb-3">
-      <div className="col-5 ">
-        <div className="weather-temperature clearfix">
-          <div className="float-start">
-            <WeatherIcon code={props.icon} />
-          </div>
-          <div className="float-none">
-            <span className="temperature me-3 ">{props.temperature}</span>
-            <span className="units">°C | °F</span>
-          </div>
-        </div>
-      </div>
-      <div className="col-3">
+    <div className="d-flex flex-row-reverse bd-highlight mb-3">
+      <div className="p-2 bd-highlight col-5">
         <ul>
           <li>
             Humidity:
@@ -28,7 +17,7 @@ export default function Temperature(props) {
           </li>
         </ul>
       </div>
-      <div className="col-3">
+      <div className="p-2 bd-highlight col-5">
         <ul>
           <li>
             <i>Sunrise:</i>

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-export default function WeatherIcon(props) {
+export default function Weather(props) {
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -24,13 +24,21 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <div>
+  <div className="Weather mt-3 mb-3">
+    <div className="weather-temperature clearfix">
+    <div className="float-start">
       <ReactAnimatedWeather
         icon={codeMapping[props.code]}
         color="goldenrod"
-        size={65}
+        size={70}
         animate={true}
       />
     </div>
+    <div className="float-start">
+      <span className="temperature ms-3">{props.temperature}</span>
+      <span className="units">°C | °F</span>
+    </div>
+    </div>
+  </div>
   );
 }

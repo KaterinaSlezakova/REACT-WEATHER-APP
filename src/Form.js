@@ -4,6 +4,7 @@ import Loader from "react-loader-spinner";
 import Overview from "./Overview";
 import Temperature from "./Temperature";
 import FormattedDate from "./FormattedDate";
+import Weather from "./Weather";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -76,8 +77,11 @@ export default function Form(props) {
           hours={weatherData.date.getHours()}
           minutes={weatherData.date.getMinutes()}
         />
-        <Temperature
+        <Weather
+          code={weatherData.icon}
           temperature={Math.round(weatherData.temperature)}
+        />
+        <Temperature
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
           sunriseHour={weatherData.sunrise.getHours()}

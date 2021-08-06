@@ -36,7 +36,7 @@ ul {
   font-size: 17px;
   top: -30px;
   line-height: 1;
-  margin-left: -10px;
+  margin-left: 10px;
 }
 .weather-temperature .active {
   color: #202124;
