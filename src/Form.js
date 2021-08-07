@@ -79,7 +79,7 @@ export default function Form(props) {
         />
         <Weather
           code={weatherData.icon}
-          temperature={Math.round(weatherData.temperature)}
+          temperature={weatherData.temperature}
         />
         <Temperature
           humidity={weatherData.humidity}
