@@ -21,7 +21,7 @@ export default function TempConversion(props) {
         <span className="temperature ms-3">{props.celsious}</span>
         <span className="units">
           °C |{" "}
-          <a href="#" onClick={showFahrenheit}>
+          <a href="/" onClick={showFahrenheit}>
             °F
           </a>
         </span>
@@ -32,7 +32,7 @@ export default function TempConversion(props) {
         <div className="TempConversion">
           <span className="temperature ms-3">{fahrenheit()}</span>
           <span className="units">
-            <a href="#" onClick={showCelsious}>
+            <a href="/" onClick={showCelsious}>
               °C
             </a>{" "}
             | °F
