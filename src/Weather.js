@@ -1,5 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import TempConversion from "./TempConversion";
+
 
 export default function Weather(props) {
   const codeMapping = {
@@ -24,7 +26,8 @@ export default function Weather(props) {
   };
 
   return (
-  <div className="Weather mt-3 mb-3">
+  <div className="Weather mt-3">
+    <div className="col-6">
     <div className="weather-temperature clearfix">
     <div className="float-start">
       <ReactAnimatedWeather
@@ -35,8 +38,8 @@ export default function Weather(props) {
       />
     </div>
     <div className="float-start">
-      <span className="temperature ms-3">{props.temperature}</span>
-      <span className="units">°C | °F</span>
+      <TempConversion celsious={props.temperature} />
+    </div>
     </div>
     </div>
   </div>

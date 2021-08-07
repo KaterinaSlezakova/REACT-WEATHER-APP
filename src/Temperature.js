@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Temperature(props) {
   return (
-    <div className="d-flex flex-row-reverse bd-highlight mb-3">
-      <div className="p-2 bd-highlight col-5">
+    <div className="row mb-3 mt-3">
+      <div className="col-3">
         <ul>
           <li>
             Humidity:
@@ -17,7 +17,7 @@ export default function Temperature(props) {
           </li>
         </ul>
       </div>
-      <div className="p-2 bd-highlight col-5">
+      <div className="col-3">
         <ul>
           <li>
             <i>Sunrise:</i>
