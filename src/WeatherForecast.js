@@ -1,5 +1,4 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 import WeatherIcon from "./WeatherIcon";
 
 import "./WeatherForecast.css";
