@@ -4,7 +4,8 @@ import Loader from "react-loader-spinner";
 import Overview from "./Overview";
 import Temperature from "./Temperature";
 import FormattedDate from "./FormattedDate";
-import Weather from "./Weather";
+import CurrentWeather from "./CurrentWeather";
+import WeatherForecast from "./WeatherForecast";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -77,7 +78,7 @@ export default function Form(props) {
           hours={weatherData.date.getHours()}
           minutes={weatherData.date.getMinutes()}
         />
-        <Weather
+        <CurrentWeather
           code={weatherData.icon}
           temperature={weatherData.temperature}
         />
@@ -89,6 +90,7 @@ export default function Form(props) {
           sunsetHour={weatherData.sunset.getHours()}
           sunsetMin={weatherData.sunset.getMinutes()}
         />
+        <WeatherForecast />
       </div>
     );
   } else {

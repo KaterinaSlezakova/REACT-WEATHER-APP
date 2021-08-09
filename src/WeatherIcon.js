@@ -1,9 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
-import TempConversion from "./TempConversion";
 
-
-export default function Weather(props) {
+export default function WeatherIcon(props){
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -24,24 +22,12 @@ export default function Weather(props) {
     "50d": "FOG",
     "50n": "FOG",
   };
-
-  return (
-  <div className="Weather mt-3">
-    <div className="col-6">
-    <div className="weather-temperature clearfix">
-    <div className="float-start">
+    return (
       <ReactAnimatedWeather
         icon={codeMapping[props.code]}
         color="goldenrod"
-        size={70}
+        size={props.size}
         animate={true}
       />
-    </div>
-    <div className="float-start">
-      <TempConversion celsious={props.temperature} />
-    </div>
-    </div>
-    </div>
-  </div>
-  );
+    );
 }
