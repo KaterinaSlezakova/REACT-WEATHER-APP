@@ -9,8 +9,8 @@ export default function App() {
     <div className="weather-app-wrapper">
       <div className="weather-app shadow-lg">
         <Form />
-        <Path />
       </div>
+      <Path />
     </div>
   );
 }

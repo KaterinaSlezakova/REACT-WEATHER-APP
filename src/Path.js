@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Path() {
   return (
-    <small>
+    <small style={{ color: "white" }}>
       This project was coded by{" "}
       <a
         href="https://www.linkedin.com/in/kslezakova"
