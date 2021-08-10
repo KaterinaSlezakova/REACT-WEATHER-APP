@@ -4,8 +4,8 @@ import TempConversion from "./TempConversion";
 
 export default function CurrentWeather(props) {
   return (
-    <div className="CurrentWeather mt-3">
-      <div className="col-6">
+    <div className="CurrentWeather ">
+      <div className="col-6 mt-3">
         <div className="weather-temperature clearfix">
           <div className="float-start">
             <WeatherIcon code={props.code} size={70} />
