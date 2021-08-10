@@ -17,6 +17,7 @@ export default function Form(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       country: response.data.sys.country,
       humidity: response.data.main.humidity,
@@ -90,7 +91,7 @@ export default function Form(props) {
           sunsetHour={weatherData.sunset.getHours()}
           sunsetMin={weatherData.sunset.getMinutes()}
         />
-        <WeatherForecast />
+        <WeatherForecast coordinates = {weatherData.coord}/>
       </div>
     );
   } else {
