@@ -91,7 +91,7 @@ export default function Form(props) {
           sunsetHour={weatherData.sunset.getHours()}
           sunsetMin={weatherData.sunset.getMinutes()}
         />
-        <WeatherForecast coordinates = {weatherData.coord}/>
+        <WeatherForecast coordinates = {weatherData.coordinates}/>
       </div>
     );
   } else {
