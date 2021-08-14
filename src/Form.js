@@ -10,7 +10,7 @@ import WeatherForecast from "./WeatherForecast";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Form(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({ready : false});
   const [city, setCity] = useState("Santorini");
 
   function handleResponse(response) {
@@ -27,11 +27,13 @@ export default function Form(props) {
       date: new Date(response.data.dt * 1000),
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
+    
     });
   }
   function search() {
-    const apiKey = "e23112c75ac1ee62d79ac9963082cc55";
+    const apiKey = "2fe472309e4eca35c3771be7be704291";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+   
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -91,7 +93,7 @@ export default function Form(props) {
           sunsetHour={weatherData.sunset.getHours()}
           sunsetMin={weatherData.sunset.getMinutes()}
         />
-        <WeatherForecast coordinates = {weatherData.coordinates}/>
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
