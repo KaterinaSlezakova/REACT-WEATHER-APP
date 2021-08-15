@@ -38,14 +38,6 @@ ul {
   line-height: 1;
   margin-left: 10px;
 }
-.weather-temperature .active {
-  color: #202124;
-  cursor: default;
-  text-decoration: none;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
 .weather-temperature span {
   color:#202124;
   line-height: 64px;

@@ -21,8 +21,8 @@ export default function Temperature(props) {
 
   return (
     <div className="Temperature">
-      <div className="row d-flex d-flex justify-content-evenly mb-3 mt-3">
-        <div className="col-3">
+      <div className="row">
+        <div className="col">
           <ul>
             <li>
               Humidity:
@@ -35,7 +35,7 @@ export default function Temperature(props) {
             </li>
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col">
           <ul>
             <li>
               <i>Sunrise:</i>

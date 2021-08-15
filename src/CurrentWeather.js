@@ -1,20 +1,33 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import TempConversion from "./TempConversion";
+import TemperatureDetails from "./TemperatureDetails";
 
 export default function CurrentWeather(props) {
   return (
-    <div className="CurrentWeather ">
-      <div className="col-6 mt-3">
-        <div className="weather-temperature clearfix">
+  <div className="CurrentWeather">
+      <div className="clearfix">
+        <div className="weather-temperature">
+        <div className="col-6 mt-4">
           <div className="float-start">
             <WeatherIcon code={props.code} size={70} />
           </div>
           <div className="float-start">
             <TempConversion celsious={props.temperature} />
           </div>
-        </div>
-      </div>
-    </div>
+        </div> 
+        </div>     
+          <div className="col-6 float-end">
+            <TemperatureDetails
+            humidity={props.humidity}
+            wind={props.wind}
+            sunriseHour={props.sunriseHour}
+            sunriseMin={props.sunriseMin}
+            sunsetHour={props.sunsetHour}
+            sunsetMin={props.sunsetMin}
+            />
+          </div>
+      </div>    
+  </div>
   );
 }

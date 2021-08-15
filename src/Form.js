@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import Overview from "./Overview";
-import Temperature from "./Temperature";
 import FormattedDate from "./FormattedDate";
 import CurrentWeather from "./CurrentWeather";
 import WeatherForecast from "./WeatherForecast";
@@ -84,8 +83,6 @@ export default function Form(props) {
         <CurrentWeather
           code={weatherData.icon}
           temperature={weatherData.temperature}
-        />
-        <Temperature
           humidity={weatherData.humidity}
           wind={Math.round(weatherData.wind)}
           sunriseHour={weatherData.sunrise.getHours()}
