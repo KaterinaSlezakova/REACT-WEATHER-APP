@@ -9,7 +9,7 @@ li {
   font-size: 18px;
   line-height: 20px;
   list-style: none;
-  font-style: italic;
+  
 }
 
 li:first-letter {
@@ -21,7 +21,7 @@ ul {
   padding: 0;
 }
 .weather-app {
-  padding: 20px 20px 10px;
+  padding: 30px 30px 30px;
 
   border-radius: 10px;
   background: rgb(255, 255, 255, 0.7);

@@ -33,19 +33,16 @@ export default function Temperature(props) {
               <span className="wind"> {props.wind}</span>
               km/h
             </li>
-          </ul>
-        </div>
-        <div className="col">
-          <ul>
+            <br></br>
             <li>
-              <i>Sunrise:</i>
+              Sunrise:
               <span className="sunrise">
                 {" "}
                 {sunriseHour}:{sunriseMin}
               </span>
             </li>
             <li>
-              <i>Sunset:</i>
+              Sunset:
               <span className="sunset">
                 {" "}
                 {sunsetHour}:{sunsetMin}
