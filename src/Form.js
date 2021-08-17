@@ -63,11 +63,7 @@ export default function Form(props) {
                 <i className="fas fa-search"></i>
               </button>
             </div>
-            <div className="col-1">
-              <button type="button" className="btn btn-warning">
-                <i className="fas fa-map-marker-alt"></i>
-              </button>
-            </div>
+           
           </div>
         </form>
         <Overview

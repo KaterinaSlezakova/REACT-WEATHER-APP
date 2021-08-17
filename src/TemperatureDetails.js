@@ -22,18 +22,22 @@ export default function Temperature(props) {
   return (
     <div className="Temperature">
       <div className="row">
-        <div className="col">
+        <div className="col-6">
           <ul>
             <li>
               Humidity:
               <span className="humidity"> {props.humidity}</span>%
             </li>
+            <br></br>
             <li>
               Wind:
               <span className="wind"> {props.wind}</span>
               km/h
             </li>
-            <br></br>
+          </ul>
+          </div>
+          <div className = "col-6">
+          <ul>
             <li>
               Sunrise:
               <span className="sunrise">
@@ -41,6 +45,7 @@ export default function Temperature(props) {
                 {sunriseHour}:{sunriseMin}
               </span>
             </li>
+            <br></br>
             <li>
               Sunset:
               <span className="sunset">

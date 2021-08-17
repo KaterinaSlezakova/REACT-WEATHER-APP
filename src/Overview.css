@@ -1,9 +1,9 @@
 h1 {
   color: #202124;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 55px;
+  line-height: 50px;
   display: inline;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Waiting for the Sunrise', cursive;
   margin-right: 10px;
   font-weight: 600;
 }
@@ -12,7 +12,7 @@ h2 {
   line-height: 40px;
   display: inline;
   color: #202124;
-  font-family: "Poppins", sans-seri;
+  font-family: 'Waiting for the Sunrise', cursive;
   font-weight: 600;
 }
 

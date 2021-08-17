@@ -10,7 +10,7 @@ export default function CurrentWeather(props) {
         <div className="weather-temperature">
         <div className="col-6 mt-4">
           <div className="float-start">
-            <WeatherIcon code={props.code} size={65} />
+            <WeatherIcon code={props.code} size={90} />
           </div>
           <div className="float-start">
             <TempConversion celsious={props.temperature} />

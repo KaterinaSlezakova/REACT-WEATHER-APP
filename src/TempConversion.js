@@ -30,13 +30,15 @@ export default function TempConversion(props) {
   } else {
       return (
         <div className="TempConversion">
-          <span className="temperature ms-3">{Math.round(fahrenheit())}</span>
+          <div className="d-flex justify-content-center">
+          <span className="temperature ms-1">{Math.round(fahrenheit())}</span>
           <span className="units">
             <a href="/" onClick={showCelsious}>
               °C
             </a>{" "}
             | °F
           </span>
+          </div>
         </div>
       );
   }
