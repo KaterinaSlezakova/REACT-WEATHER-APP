@@ -5,6 +5,8 @@ import Overview from "./Overview";
 import FormattedDate from "./FormattedDate";
 import CurrentWeather from "./CurrentWeather";
 import WeatherForecast from "./WeatherForecast";
+import CurrentPosition from "./CurrentPosition";
+
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -63,7 +65,7 @@ export default function Form(props) {
                 <i className="fas fa-search"></i>
               </button>
             </div>
-           
+        <CurrentPosition />   
           </div>
         </form>
         <Overview
